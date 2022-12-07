@@ -7,6 +7,13 @@
     Tahoma,
     sans-serif;
   --bg-color: #333;
+
+}
+
+/* set content highlight color and background */
+::selection {
+  background-color: yellow;
+  color: var(--bg-color);
 }
 
 body {
@@ -73,6 +80,11 @@ pre {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* on <pre> click, select all contents so the code is highlighted by ::selection*/
+pre:active {
+  user-select: all;
 }
 
 main {
